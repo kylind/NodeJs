@@ -1,0 +1,58 @@
+{% extends 'BaseTemplate.page' %}
+{% if USER or CONTACT_CREATED %}{% endif %}
+
+{% block configuration %}
+    {{ pageType('apply') }}
+    {{ applyToJobWizardPage('FormApplication') }}
+    {% if (URL_QUERY.jobId) %}
+        {{ setJobId(URL_QUERY.jobId) }}
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    {% if APPLIED_JOB_DATA %}
+        {% include 'tpt/successfulApplicationMessage.tpt' %}
+    {% endif %}
+    {% if CONTACT_CREATED and not USER %}
+        <h2 class="tPad1 bPad05 text1_25 tColor2">Want to come back and apply for jobs later? Update your profile? Create an account with us:</h2>
+        <div class="tPad05">
+            <form method="post" action="{{ PORTAL_URL ~ 'ChoosePassword' }}" autocomplete="off" class="generalForm">
+                <h2 class="text1_25 tColor2 clearer">Choose a password</h2>
+                <div><input type="hidden" name="choosePassword" /></div>
+                <p class="tPad1">
+                    <label for="password">Password*:</label>
+                </p>
+                <div><input
+                        type="password"
+                        name="password"
+                        id="password"
+                        required="required"
+                        autofocus="autofocus"
+                        value="" /></div>
+                <p class="tPad1">
+                    <label for="confirmPassword">Confirm password*:</label>
+                </p>
+                <div><input
+                        type="password"
+                        name="confirmPassword"
+                        id="confirmPassword"
+                        required="required"
+                        value="" /></div>
+                <div class="tPad1">
+                    <button type="submit" value="Continue">Continue</button>
+                    <a class="buttonLike" href="{{ BASE_PORTAL_URL }}">Cancel</a>
+                </div>
+            </form>
+            {% if useSocialRegistration %}
+                Or log in with a social network:
+                <a class="socialRegistrationIcon registerFacebook" href="{{ LOGINWITHFACEBOOK }}">Connect with Facebook</a>
+                <a class="socialRegistrationIcon registerLinkedin" href="{{ LOGINWITHLINKEDIN }}">Connect with LinkedIn</a>
+            {% endif %}
+        </div>
+    {% endif %}
+    {% if USER and not APPLIED_JOB_DATA %}
+        <h2 class="bPad05 text1_25 tColor2 clearer">Your registration has been completed!</h2>
+        <p class="tPad1">Take a moment to review all sections of your <strong><a href="{{ PORTAL_URL ~ 'Profile' }}">profile</a></strong>.</p>
+    {% endif %}
+    <div class="tPad1"><a href="{{ PORTAL_URL ~ 'SearchJobs' }}" class="buttonLike">Back to search results</a></div>
+{% endblock %}

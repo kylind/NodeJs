@@ -1,0 +1,14 @@
+{
+  "name": "Regex",
+  "version": "1.0.0",
+  "description": "extract text from page and convert it to variable",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Regex"
+  ],
+  "author": "Kylin",
+  "license": "MIT"
+}
