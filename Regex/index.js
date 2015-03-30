@@ -8,17 +8,17 @@ var rsFile = process.argv[3];
 var fileList = fetchPageFiles(toDoFolder);
 var regexs = []
 //var regex1 = new RegExp(">(\\s*[\\w&#]+[\\w ,.!:'&#;\\*\\?\"]{2,})</\\w+>", 'igm'); //<div>abc</div>
-var regex1 = new RegExp(">\\s*([^\\s><\\}\\{%]+[^><\\}\\{%]{2,})\\s*<[/]?", 'igm'); //<div>abc</div> google+
-var regex2 = new RegExp(">\\s*([^\\s><\\}\\{%]+[^><\\}\\{%]{2,})\\s*\\{[\\{%]", 'igm'); //<div>abc {{ abc }} | <div>abc {% abc %}
-var regex3 = new RegExp("[%\\}]\\}\\s*([^\\s><\\}\\{%]+[^><\\}\\{%]{2,})\\s*</\\w+>", 'igm'); //{{ abc }}abc</div> | {% abc %}abc</div>
-var regex4 = new RegExp("[%\\}]\\}\\s*([^\\s><\\}\\{%]+[^><\\}\\{%\\=]{2,})\\s*\\{[\\{%]", 'igm'); //{{ abc }}abc{{ abc }}
+var regex1 = new RegExp(">[\\s,\"#:.]*([^><\\}\\{%/\\=]+\\w+)[\\s,\"#:.!\\?\\+]*<[/]?(?!script)", 'igm'); //<div>abc</div> google+
+//var regex2 = new RegExp(">\\s*([^\\s><\\}\\{%]+[^><\\}\\{%]{2,})\\s*\\{[\\{%]", 'igm'); //<div>abc {{ abc }} | <div>abc {% abc %}
+//var regex3 = new RegExp("[%\\}]\\}\\s*([^\\s><\\}\\{%]+[^><\\}\\{%]{2,})\\s*</\\w+>", 'igm'); //{{ abc }}abc</div> | {% abc %}abc</div>
+//var regex4 = new RegExp("[%\\}]\\}\\s*([^\\s><\\}\\{%]+[^><\\}\\{%\\=]{2,})\\s*\\{[\\{%]", 'igm'); //{{ abc }}abc{{ abc }}
 //var regex5 = new RegExp(">\\s*([\\w&#]+[\\s\\w ,.!:'&#;\\*\\?\"]{2,})</p>", 'igm'); //<p>sdsf</p>(multiple line p element)
 
 regexs.push(regex1);
-regexs.push(regex2);
+/*regexs.push(regex2);
 regexs.push(regex3);
 regexs.push(regex4);
-//regexs.push(regex5);
+//regexs.push(regex5);*/
 var allVariableDeclaim="";
 fileList.forEach(function(val) {
     var newFilename = path.dirname(val) + "/" + path.basename(val, path.extname(val)) + ".newpage";
@@ -73,7 +73,7 @@ function parseData(data,allVariableDeclaim) {
                 //if (allVariableDeclaim.search(new RegExp("{# " + text + " #}","im"))==-1) {
                 if (allVariableDeclaim.indexOf("{# " + text + " #}")==-1) {
 
-                    variableDeclaim = variableDeclaim + "{% set " + variable + " = '"+text+"' %}{# " + text + " #}\n\n";
+                    variableDeclaim = variableDeclaim + "{% set " + variable + ' = "'+text.replace(/"/g,'\\"')+'" %}{# ' + text + ' #}\n\n';
                     allVariableDeclaim=allVariableDeclaim.concat(variableDeclaim);
                 }
 

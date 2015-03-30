@@ -15,10 +15,10 @@ var regex4 = new RegExp("[%\\}]\\}(\\s*[\\w&#,.]+[\\w ,.!:'&#;\\*\\?\"]{2,})\\s*
 var regex5 = new RegExp(">(\\s*[\\w&#]+[\\s\\w ,.!:'&#;\\*\\?\"]{2,})\\s*</p>", 'igm'); //<p>sdsf</p>(multiple line p element)
 var regex5 = new RegExp("placeholder[ ]*=[ ]*\"([\\w&#]+[\\w ,.!:'&#;\\*\\?\"]{2,})\"", 'igm'); //placeholder
 */
-var regex1 = new RegExp(">\\s*([^\\s><\\}\\{%]+[^><\\}\\{%/]{2,})\\s*<[/]?", 'igm'); //<div>abc</div> google+
-var regex2 = new RegExp(">\\s*([^\\s><\\}\\{%]+[^><\\}\\{%/]{2,})\\s*\\{[\\{%]", 'igm'); //<div>abc {{ abc }} | <div>abc {% abc %}
-var regex3 = new RegExp("[%\\}]\\}\\s*([^\\s><\\}\\{%]+[^><\\}\\{%/]{2,})\\s*</\\w+>", 'igm'); //{{ abc }}abc</div> | {% abc %}abc</div>
-var regex4 = new RegExp("[%\\}]\\}\\s*([^\\s><\\}\\{%\\=]+[^><\\}\\{%/\\=\\n\\r]{2,})\\s*\\{[\\{%]", 'igm'); //{{ abc }}abc{{ abc }}
+var regex1 = new RegExp(">[\\s,\"#:.]*([^><\\}\\{%/\\=]+\\w+)[\\s,\"#:.!\\?\\+]*<[/]?(?!script)", 'igm'); //<div>abc</div> google+
+var regex2 = new RegExp(">[\\s,\"#:.]*([^><\\}\\{%/\\=]+\\w+)[\\s,\"#:.!\\?\\+]*\\{[\\{%]", 'igm'); //<div>abc {{ abc }} | <div>abc {% abc %}
+var regex3 = new RegExp("[%\\}]\\}[\\s,\"#.]*([^><\\}\\{%/\\=]+\\w+)[\\s,\"#:.!\\?\\+]*<[/]?(?!script)", 'igm'); //{{ abc }}abc</div> | {% abc %}abc</div>
+var regex4 = new RegExp("[%\\}]\\}[\\s,\"#.]*([^><\\}\\{%/\\=\\n\\r]+\\w+)[\\s,\"&#:.!\\?\\+]*\\{[\\{%]", 'igm'); //{{ abc }}abc{{ abc }}
 var regex5 = new RegExp("placeholder[ ]*=[ ]*\"([^\\s><\\}\\{%]+[\\w ]{2,})\"", 'igm'); //placeholder
 
 regexs.push(regex1);
@@ -80,7 +80,8 @@ function parseData(data,allVariableDeclaim) {
 
                 //if (allVariableDeclaim.search(new RegExp("{# " + text + " #}","im"))==-1) {
                 if (allVariableDeclaim.indexOf("{# " + text + " #}")==-1) {
-                    variableDeclaim = variableDeclaim + "{% set " + variable + " = '"+text+"' %}{# " + text + " #}\n\n";
+
+                    variableDeclaim = variableDeclaim + "{% set " + variable + ' = "'+text.replace(/"/g,'\\"')+'" %}{# ' + text + ' #}\n\n';
                     allVariableDeclaim=allVariableDeclaim.concat(variableDeclaim);
                 }
 

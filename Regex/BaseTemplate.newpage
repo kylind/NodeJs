@@ -2,13 +2,14 @@
 <head>
 </head>
 <body>
-{{ i_am_tpt_ }}
-<h2>{{ i_am_tpt1_ }}</h2>
-<h2>{{ i_am_tpt2_ }}  </h2>
-{{ i_am_span_ }}
-<span>{{ i_am_tpt3_ }}</span>
-<span>{{ i_am_tpt4_ }}</span>
-<span>{{ i_am_span_ }}</span>
+{{ i_am_tpt }}!
+<h2>{{ i_am_tpt1 }}!</h2>
+<h2>{{ i_am_tpt2 }}!  </h2>
+{{ i_am_span }}!
+<span>{{ _nbsp__i_am_tpt3 }}</span>
+<span>{{ i_am_A }}:  </span>
+<span>.{{ i_am__B }}" </span>
+<span>{{ i_am__C_ }} </span>
 
 <p class="tMar1">{{ We_re_looking_for_people_who_can_grow_think_if_We_ }}</p>
 <p> </p>
