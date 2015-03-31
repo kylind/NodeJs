@@ -3,6 +3,7 @@ var path = require('path');
 
 var toDoFolder = process.argv[2];
 var rsFile = process.argv[3];
+var detailFile = process.argv[4];
 
 
 var fileList = fetchPageFiles(toDoFolder);
@@ -15,10 +16,10 @@ var regex4 = new RegExp("[%\\}]\\}(\\s*[\\w&#,.]+[\\w ,.!:'&#;\\*\\?\"]{2,})\\s*
 var regex5 = new RegExp(">(\\s*[\\w&#]+[\\s\\w ,.!:'&#;\\*\\?\"]{2,})\\s*</p>", 'igm'); //<p>sdsf</p>(multiple line p element)
 var regex5 = new RegExp("placeholder[ ]*=[ ]*\"([\\w&#]+[\\w ,.!:'&#;\\*\\?\"]{2,})\"", 'igm'); //placeholder
 */
-var regex1 = new RegExp(">[\\s,\"#:.]*([^><\\}\\{%/\\=]+\\w+)[\\s,\"#:.!\\?\\+]*<[/]?(?!script)", 'igm'); //<div>abc</div> google+
-var regex2 = new RegExp(">[\\s,\"#:.]*([^><\\}\\{%/\\=]+\\w+)[\\s,\"#:.!\\?\\+]*\\{[\\{%]", 'igm'); //<div>abc {{ abc }} | <div>abc {% abc %}
-var regex3 = new RegExp("[%\\}]\\}[\\s,\"#.]*([^><\\}\\{%/\\=]+\\w+)[\\s,\"#:.!\\?\\+]*<[/]?(?!script)", 'igm'); //{{ abc }}abc</div> | {% abc %}abc</div>
-var regex4 = new RegExp("[%\\}]\\}[\\s,\"#.]*([^><\\}\\{%/\\=\\n\\r]+\\w+)[\\s,\"&#:.!\\?\\+]*\\{[\\{%]", 'igm'); //{{ abc }}abc{{ abc }}
+var regex1 = new RegExp(">[\\s,\"#:.]*([^><\\}\\{%/\\=]+\\w+)[\\s,\"#:.!\\?\\+\\*]*<[/]?(?!script)", 'igm');//<div>abc</div> google+
+var regex2 = new RegExp(">[\\s,\"#:.]*([^><\\}\\{%/\\=]+\\w+)[\\s,\"#:.!\\?\\+\\*]*\\{[\\{%]", 'igm'); //<div>abc {{ abc }} | <div>abc {% abc %}
+var regex3 = new RegExp("[%\\}]\\}[\\s,\"#.]*([^><\\}\\{%/\\=]+\\w+)[\\s,\"#:.!\\?\\+\\*]*<[/]?(?!script)", 'igm'); //{{ abc }}abc</div> | {% abc %}abc</div>
+var regex4 = new RegExp("[%\\}]\\}[\\s,\"#.]*([^><\\}\\{%/\\=\\n\\r]+\\w+)[\\s,\"&#:.!\\?\\+\\*]*\\{[\\{%]", 'igm'); //{{ abc }}abc{{ abc }}
 var regex5 = new RegExp("placeholder[ ]*=[ ]*\"([^\\s><\\}\\{%]+[\\w ]{2,})\"", 'igm'); //placeholder
 
 regexs.push(regex1);
@@ -27,14 +28,12 @@ regexs.push(regex3);
 regexs.push(regex4);
 regexs.push(regex5);
 
-var allVariableDeclaim="";
+var allVariableDeclaims="";
+
 fileList.forEach(function(val) {
-    //var newFilename = path.dirname(val) + "/" + path.basename(val, path.extname(val)) + ".newpage";
+
     var newFilename = val;
-    /*if (fs.existsSync(newFilename)) {
-        fs.unlinkSync(newFilename);
-    }
-*/
+
     var data = fs.readFileSync(val, {
         encoding: 'utf8'
     });
@@ -43,22 +42,33 @@ fileList.forEach(function(val) {
         return;
     }
 
-    var rs = parseData(data,allVariableDeclaim);
+    var rs = parseData(data,allVariableDeclaims);
+    allVariableDeclaims = rs.allVariableDeclaims;
 
-    allVariableDeclaim=rs.allVariableDeclaim;
+    if (rs.variableDeclaims != "") {
+        fs.appendFileSync(rsFile, "{# ------------ " + path.basename(val) + " ------------ #}\n" + rs.variableDeclaims);
+    }
 
-    fs.appendFileSync(rsFile, "{# ------------ " + path.basename(val) + " ------------ #}\n" + rs.variableDeclaim);
+    if (rs.variableDetails != "") {
+        fs.appendFileSync(detailFile, "{# ------------ " + path.basename(val) + " ------------ #}\n" + rs.variableDetails);
+    }
 
-    fs.writeFileSync(newFilename, rs.newData);
+    if (rs.newData != "") {
+
+        fs.writeFileSync(newFilename, rs.newData);
+
+    }
 
 });
 
 
-function parseData(data,allVariableDeclaim) {
+function parseData(data,allVariableDeclaims) {
 
     var text = "";
     var variable = "";
     var variableDeclaim = "";
+    var variableDeclaims = "";
+    var variableDetails = "";
     var variableOutput = "";
 
     var newData = data;
@@ -71,18 +81,20 @@ function parseData(data,allVariableDeclaim) {
                 text = matched[1].trim();
                 variable = text.substring(0, 50).replace(/[^0-9a-zA-Z]/g, '_');
 
-
-/*                if (allVariableDeclaim.search(new RegExp("/Start/ " + text + " /End/", "im")) == -1) {
-                    variableDeclaim = variableDeclaim + "/Name/ " + variable + " = '' /Start/ " + text + " /End/\n\n";
-                    allVariableDeclaim = allVariableDeclaim.concat(variableDeclaim);
+                if(/^\d\w/.test(variable)){
+                    variable="_"+variable;
                 }
-*/
+                if(variable=="in"||variable=="or"){
+                    variable=variable+"_";
+                }
 
-                //if (allVariableDeclaim.search(new RegExp("{# " + text + " #}","im"))==-1) {
-                if (allVariableDeclaim.indexOf("{# " + text + " #}")==-1) {
+                if (allVariableDeclaims.indexOf("{# " + text + " #}")==-1) {
 
-                    variableDeclaim = variableDeclaim + "{% set " + variable + ' = "'+text.replace(/"/g,'\\"')+'" %}{# ' + text + ' #}\n\n';
-                    allVariableDeclaim=allVariableDeclaim.concat(variableDeclaim);
+                    variableDetails = variableDetails.concat("{% set " + variable + ' = "'+text.replace(/"/g,'\\"')+'" %}{# ' + text + ' #}\n\n');
+
+                    variableDeclaim = "{% set " + variable + ' = "" %}{# ' + text + ' #}\n\n';
+                    variableDeclaims=variableDeclaims.concat(variableDeclaim);
+                    allVariableDeclaims=allVariableDeclaims.concat(variableDeclaim);
                 }
 
                 variableOutput = matched[0].replace(matched[1], "{{ " + variable + " }}")
@@ -95,8 +107,10 @@ function parseData(data,allVariableDeclaim) {
 
     return {
         newData: newData,
-        variableDeclaim: variableDeclaim,
-        allVariableDeclaim: allVariableDeclaim
+        variableDeclaims: variableDeclaims,
+        variableDetails:variableDetails,
+        allVariableDeclaims: allVariableDeclaims
+
     };
 
 }
