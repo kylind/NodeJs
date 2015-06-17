@@ -1,0 +1,192 @@
+{% extends 'BaseTemplate.nopage' %}
+{% if USER or CONTACT_CREATED %}{% endif %}
+
+{% block configuration %}
+    {{ pageType('jobList') }}
+    {{ listId(78) }}
+    {{ recordsPerPage(jobRecordsAmount) }}
+    {{ jobView('JobDetail') }}
+    {{ setJobId(null) }}
+    {{ removePortalPersistentData('sessionJobId') }}
+    {{ removePortalPersistentData('sessionApplyRedirect') }}
+{% endblock %}
+
+{% block extraHeadData %}
+
+{% endblock %}
+
+{% block bodyId %}locations{% endblock %}
+
+{% block banner %}
+        <div class="banner banner-locations">
+            <div class="headline">
+                <h1>locations</h1>
+            </div>
+        </div>
+{% endblock %}
+
+{% block navWrapper %}
+
+        <a class="link-menu" href="{{ Base_PORTAL_URL }}">Back to home</a>
+
+{% endblock %}
+
+
+{% block content %}
+
+    {% if USER or CONTACT_CREATED %}
+        {% set applicationUrl = applyPage %}
+    {% else %}
+        {% set applicationUrl = shortRegistrationPath ? (useUploadResume ? uploadResumePage : registerPage ) : loginPage %}
+    {% endif %}
+
+
+
+        <section class="career-area show-hide">
+            <h2 class="the-americas career-hdr"><span class="plus-minus"><img src="images/plus.png"></span> NORTH AMERICA</h2>
+            <div class="info americas-info">
+                    <P class="taRight">
+                        <a href="{{ PORTAL_URL ~ 'SearchJobsGeoNorthAmerica' }}"> Search for Jobs in North America</a>
+                    </P>
+                <h3>NORTH AMERICA</h3>
+                <p>Step onto the NIKE, Inc. World Headquarters campus in Beaverton, Ore., and the brand’s energy and innovative drive are palpable. A diverse assembling of more than 8,500 employees push the limits in areas such as management, research, design, development, marketing, finance and other administrative functions. From a leading-edge <a href="http://about.nike.com/pages/nike-explore-team-sport-research-lab" target="_blank">sport research lab</a> and design facilities to renowned onsite childcare centers, Nike campus life reflects the company’s focus on employee growth and balance of work and play. Just minutes from downtown Portland, the lush, meticulously manicured grounds of the campus stretch across 270 acres and encompass more than 35 buildings — most displaying the names of legendary athletes such as John McEnroe, Mia Hamm and Nolan Ryan. The Nike campus circles the tranquil Lake Nike and features world-class amenities such as fitness centers, NIKE, Inc. retail stores, cafeterias and restaurants, dry-cleaning services, running trails, soccer fields, beach volleyball courts and much more. Historical displays and athlete memorabilia remind employees, athletes and guests of Nike’s rich history and heritage — as well as its potential.</p>
+                <p>While Nike World Headquarters boasts the largest concentration of Nike employees in North America, the company has other corporate locations in cities such as New York, Chicago, Los Angeles, the Toronto area and Fort Worth, Texas (home of Nike Golf’s research facility, <a href="http://www.nike.com/us/en_us/c/golf/the-oven" target="_blank">The Oven</a>).</p>
+                <p>Several of Nike’s high-tech distribution centers operate in the U.S., with the majority of the facilities in Memphis, Tenn. Nike distribution employees ensure that millions of units of footwear, apparel and equipment arrive at the right destinations on time. And <a href="http://www.nikeihm.com/" target="_blank">Nike In-House Manufacturing</a> (IHM) manufactures and engineers plastics — including the iconic Nike Air bags — for NIKE, Inc. and other customers from their locations in Beaverton, Ore., and St. Louis, Mo.</p>
+                <p>North America is also one of Nike’s hottest markets for retail, with more than 200 Nike Stores and Nike Factory Stores in the U.S. and Canada.</p>
+                <!--<a class="white-btn" href="#" target="_blank">Learn More</a>
+                <ul>
+                    <li><img src="images/americas-pic11.jpg"></li>
+                    <li><img src="images/americas-pic2.jpg"></li>
+                </ul>-->
+            </div>
+        </section>
+        <section class="career-area show-hide">
+            <h2 class="south-america career-hdr"><span class="plus-minus"><img src="images/plus.png"></span> Central & South America</h2>
+            <div class="info samerica-info">
+                    <P class="taRight">
+                        <a href="{{ PORTAL_URL ~ 'SearchJobsGeoLatam' }}"> Search for Jobs in Central & South America</a>
+                    </P>
+                <h3>Central & South America</h3>
+                <p>From the heart of the fashionable Ipanema Beach district in Brasil to the Rambla of Montevideo in Uruguay, Nike retail, distribution center and corporate employees help fuel the passion of sports across Central and South America. Nike’s presence in the region spans decades: What was once a small Nike do Brasil subsidiary in 1990 is now one of the company’s most important markets, and Nike’s first operations in Argentina opened more than two decades ago. Today, more than 3,000 employees work in Brasil, Argentina, Chile, Uruguay, Paraguay, Bolivia and Mexico.</p>
+                <!--<a class="white-btn" href="#" target="_blank">Learn More</a>
+                <ul>
+                    <li><img src="images/americas-pic4.jpg"></li>
+                    <li><img src="images/samericas-pic2.jpg"></li>
+                </ul>-->
+            </div>
+        </section>
+        <section class="career-area show-hide">
+            <h2 class="europe career-hdr"><span class="plus-minus"><img src="images/plus.png"></span> EUROPE</h2>
+            <div class="info europe-info">
+                     <P class="taRight">
+                        <a href="{{ PORTAL_URL ~ 'SearchJobsGeoEurope' }}"> Search for Jobs in Europe</a>
+                    </P>
+                <h3>EUROPE</h3>
+                <p>NIKE, Inc.’s European Headquarters is located in Hilversum, just 16 miles southeast of Amsterdam, one of Europe’s most diverse and exciting capitals. With nearly 2,000 employees, from more than 70 countries, the campus is a dynamic, energizing place to work that reflects the values and spirit of our brand. </p>
+                <p>The campus features buildings bearing the name of European sporting legends such as Sergei Bubka, Richard Krajicek and Eric Cantona, and is located in and amongst numerous parks, lakes, cycling lanes and running tracks. Since Nike believes that if you have a body, you are an athlete, our employees all benefit from extensive, world-class sports facilities including: gymnasiums with regular classes, football pitches, tennis, volleyball and basketball courts, running tracks and on-site physiotherapists. Employees also benefit from amenities such as an employee store and numerous catering facilities. </p>
+                <p>Our European Headquarters support Nike’s operations across the Western Europe and Central & Eastern Europe geographies. Departments include Marketing & Communications, Design, Digital & Technology, Human Resources, Finance, Legal, Merchandising, Product Development, Retail and Sales.</p>
+                <p>Nike also has country headquarters in major European hubs such as London, Moscow, Paris, Frankfurt, Barcelona, Istanbul, Prague, Bologna and Stockholm, a European Distribution Center based in Belgium, innovation centers in locations such as Montebelluna Italy, and retail stores across the entire European region. </p>
+                <!--<a class="white-btn" href="#" target="_blank">Learn More</a>
+                <ul>
+                    <li><img src="images/europe-pic8.jpg"></li>
+                    <li><img src="images/europe10.jpg"></li>
+                </ul>-->
+            </div>
+        </section>
+        <section class="career-area show-hide">
+            <h2 class="greater-china-asia-pac career-hdr"><span class="plus-minus"><img src="images/plus.png"></span>Greater China</h2>
+            <div class="info china-info">
+                                <P class="taRight">
+                        <a href="{{ PORTAL_URL ~ 'SearchJobsGeoGreaterChina' }}"> Search for Jobs in Greater China</a>
+                    </P>
+                <h3>Greater China</h3>
+                <p>The Nike Greater China Campus, located in Shanghai, confirms Nike’s commitment to the Greater China market and is home to almost 2000 employees. Together, China, Hong Kong and Taiwan continue to elevate both the Nike business and brand creating the fasting growing global market and second largest single market behind Nike North America with sales of over USD2.5 Billion.</p>
+                <p>As the leading sports brand in China, Nike continues to push the limits of innovation and growth. We remain closely focused on bringing the brand closer to consumers, while creating platforms for Chinese athletes to pursue their dreams. The foundation of our success in China is, of course, innovation – innovation drawn from listening to the voice of the Chinese athlete and then applying creative design and technology to meet their needs.</p>
+                <p>Across Greater China Nike is taking the retail experience to the next level, delivering true personalization and customization at every turn. Continued expansion of our retail network will only build stronger consumer connections that will feature our most innovative products – allowing us to strengthen the Nike brand and enable a truly world-class shopping experience.</p>
+                <p>Growth is all we’re experiencing in China. Whether it’s across our Running, Training, Sportswear, Tennis, Action Sports Categories; our hardworking employee-teams in Merchandising, Marketing, Sales, Retail & Manufacturing; or our Enabling functions, such as Human Resources, Supply Chain Operations, Legal, IT and Finance – we are on the offense always for talent and remain committed to both the development of talent in the local market place as well as the creation of future global leaders.</p>
+                <!--<a class="white-btn" href="#" target="_blank">Learn More</a>
+                <ul>
+                    <li><img src="images/china8.jpg"></li>
+                    <li><img src="images/china7.jpg"></li>
+                </ul>-->
+            </div>
+        </section>
+        <section class="career-area show-hide">
+            <h2 class="japan career-hdr"><span class="plus-minus"><img src="images/plus.png"></span>JAPAN & ASIA PACIFIC</h2>
+            <div class="info japan-info">
+                                <P class="taRight">
+                        <a href="{{ PORTAL_URL ~ 'SearchJobsGeoAsiaPacific' }}"> Search for Jobs in Japan & Asia Pacific</a>
+                    </P>
+                <h3>JAPAN & ASIA PACIFIC</h3>
+                <p>Japan and Asia Pacific form one of the most diverse and exciting regions for the Nike business driven by over 5000 employees located across 13 dynamic and energizing countries. </p>
+                <p>The Japanese and Asia-Pacific geographies support Nike’s operations across all key business functions inclusive of Marketing & Communications, Design, Digital & Technology, Human Resources, Finance, Legal, Merchandising, Product Development, Retail and Sales. The region is home to the majority of Nike’s manufacturing partners and we remain proud of the explosive growth of the company at Retail level. </p>
+                <p>Nike has country head-quarters located throughout Asia-Pacific inclusive of Japan, Korea, India, Singapore, Malaysia, Indonesia, Vietnam, Thailand, Sri-Lanka, South Africa and Australia & Pacific as well as retail stores across the region.</p>
+                <!--<a class="white-btn" href="#" target="_blank">Learn More</a>
+                <ul>
+                    <li><img src="images/japain-pic5.jpg"></li>
+                    <li><img src="images/china1.jpg"></li>
+                </ul>-->
+            </div>
+        </section>
+        <section class="career-area show-hide">
+            <h2 class="middle-east-africa career-hdr"><span class="plus-minus"><img src="images/plus.png"></span> middle east & africa</h2>
+            <div class="info africa-info">
+                                <P class="taRight">
+                        <a href="{{ PORTAL_URL ~ 'SearchJobsGeoMEastAfrica' }}"> Search for Jobs in Middle East & Africa</a>
+                    </P>
+                <h3>middle east & africa</h3>
+                <p>The emerging markets of Africa and Middle East provide a unique opportunity to deliver sport innovation and inspiration in the diverse cultures of the regions. More than 200 Nike employees work in Africa and the Middle East, with the majority working at the Nike Africa corporate office in Midrand, Gauteng, South Africa. Nike Stores and Nike Factory Stores serve consumers in the bustling metropolises of many African countries, and Nike also has a retail presence in Israel.</p>
+                <!--<a class="white-btn" href="#" target="_blank">Learn More</a>
+                <ul>
+                    <li><img src="images/ME-pic1.jpg"></li>
+                    <li><img src="images/ME-pic2.jpg"></li>
+                </ul>-->
+            </div>
+        </section>
+
+
+
+
+        {% if URL_QUERY is not empty or searchLocation or searchText %}
+            <form method="post" action="{{searchJobsPage}}" autocomplete="on" class="generalForm">
+
+                {% include 'tpt/searchFilterBy.tpt' %}
+            </form>
+
+            {% include 'tpt/jobPagination.tpt' with {'recordsAmount': jobRecordsAmount, 'minPag': '5', 'maxPag': '5', 'displayLegend': true} %}
+
+            <ul class="jobList cleanList">
+                {% for job in jobs %}
+                    {% include 'tpt/jobResultItem.tpt' %}
+                {% else %}
+                    <li>There are currently no jobs available based on your search criteria.
+                        {% if useJobAlerts and (USER or CONTACT_CREATED) %}
+                        - <a href="{{ PORTAL_URL ~ 'CreateAgent' }}">Create search agent</a>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+
+            {% include 'tpt/jobPagination.tpt' with {'recordsAmount': jobRecordsAmount, 'minPag': '5', 'maxPag': '5'} %}
+        {% endif %}
+
+    <script>
+        $(document).ready(function() {
+                $('.show-hide h2').click(function() {
+                    if($(this).hasClass('active')) {
+                        $(this).parent().find('.info').hide();
+                        $(this).removeClass('active');
+                        $('.plus-minus').html('<img src="images/plus.png">');
+                    }
+                    else {
+                        $('.show-hide h2').removeClass('active');
+                        $('.show-hide .info').hide();
+                        $(this).parent().find('.info').show();
+                        $(this).addClass('active');
+                        $('.plus-minus').html('<img src="images/plus.png">');
+                        $(this).find('.plus-minus').html('<img src="images/minus.png">');
+                    }
+                });
+        });
+    </script>
+{% endblock %}

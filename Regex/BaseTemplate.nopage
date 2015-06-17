@@ -96,29 +96,29 @@
              <div class="darkbar">
                 {% block languageMenu %}
                     <ul class="darkbar-lang">
-                        <li><a href="{{ equivalentPageES }}">{{ Espa_ntilde_ol }}</a></li>
-                        <li><a href="{{ equivalentPagePR }}">{{ Portugu_ecirc_s }}</a></li>
+                        <li><a href="{{ equivalentPageES }}">Espa&ntilde;ol</a></li>
+                        <li><a href="{{ equivalentPagePR }}">Portugu&ecirc;s</a></li>
                     </ul>
                 {% endblock %}
             </div>
 
             <header>
-                <div class="header-section"><a class="logo" href="{{ BASE_PORTAL_URL }}">{{ Nike }}</a></div>
+                <div class="header-section"><a class="logo" href="{{ BASE_PORTAL_URL }}">Nike</a></div>
                 <div class="header-section-nav">
                     <span class="mobile-toggle mobile-only"><img src="http://seostatic.tmp.com/job-images/5872/mobile-toggle.png"></span>
                 </div>
                 <nav class="mobile-hide toggle-hide">
                     <ul>
-                        <li><a target="_blank" href="http://www.youtube.com/channel/UC-KKjClEbc7kn6xFoIUSLpQ">{{ Nike_talent_videos }}</a></li>
-                        <li><a target="_blank" href="https://www.linkedin.com/company/nike?trk=top_nav_home">{{ connect_with_us_on_linkedin }}</a></li>
-                        <li><a target="_blank" href="http://www.glassdoor.com/Overview/Working-at-NIKE-EI_IE1699.11,15.htm">{{ follow_us_on_glassdoor }}</a></li>
-                        <li><a href="{{  USER ? profilePage : PORTAL_URL ~ 'RegisterTalentPool'}}">{{ join_our_talent_community }}</a></li>
-                        <li><a href="{{  USER ? PORTAL_URL ~ 'CreateAgent' : PORTAL_URL ~ 'RegisterAgent'}}">{{ Sign_Up_For_Job_Alerts }}</a></li>
+                        <li><a target="_blank" href="http://www.youtube.com/channel/UC-KKjClEbc7kn6xFoIUSLpQ">Nike talent videos</a></li>
+                        <li><a target="_blank" href="https://www.linkedin.com/company/nike?trk=top_nav_home">connect with us on linkedin</a></li>
+                        <li><a target="_blank" href="http://www.glassdoor.com/Overview/Working-at-NIKE-EI_IE1699.11,15.htm">follow us on glassdoor</a></li>
+                        <li><a href="{{  USER ? profilePage : PORTAL_URL ~ 'RegisterTalentPool'}}">join our talent community</a></li>
+                        <li><a href="{{  USER ? PORTAL_URL ~ 'CreateAgent' : PORTAL_URL ~ 'RegisterAgent'}}">Sign Up For Job Alerts</a></li>
                     </ul>
                     <div class="blanket"></div>
                     <div class="redirectWarning">
-                        <p>{{ You_are_leaving_this_Nike_website_and_going_to_a_s }}.</p>
-                        <p>{{ You_will_be_redirected_in }} <span class="countdown">5</span> {{ seconds }}.</p>
+                        <p>You are leaving this Nike website and going to a site operated by a third party.</p>
+                        <p>You will be redirected in <span class="countdown">5</span> seconds.</p>
                     </div>
                 </nav>
                 <div class="header-section-last">
@@ -141,22 +141,22 @@
                     {% endblock %}
 
                     {% if USER and not isProfile %}
-                        <a class="link-menu" href="{{ profilePage }}" title="My Profile">{{ My_Profile }}</a>
+                        <a class="link-menu" href="{{ profilePage }}" title="My Profile">My Profile</a>
                     {% endif %}
                 </div>
                  <section class="top-searches">
                     <div class="search-left">
                         <section class="corp-hdr">
-                            <h2>{{ CORPORATE }}</h2>
-                            <p>{{ Limits_shattered_daily_at_Nike_s_corporate_headqua }}</p>
-                            <a class="apply2" href="{{ PORTAL_URL ~ 'SearchJobsCorporate'}}">{{ Corporate_Careers }}</a>
+                            <h2>CORPORATE</h2>
+                            <p>Limits shattered daily at Nike's corporate headquarters and offices around the world</p>
+                            <a class="apply2" href="{{ PORTAL_URL ~ 'SearchJobsCorporate'}}">Corporate Careers</a>
                         </section>
                     </div>
                     <div class="search-right">
                         <section class="corp-hdr">
-                            <h2>{{ RETAIL }}</h2>
-                            <p>{{ Nike_Retail_employees_inspire_athletes_of_all_abil }}</p>
-                            <a class="apply2" href="{{ PORTAL_URL ~ 'SearchJobsRetail'}}">{{ Retail_Careers }}</a>
+                            <h2>RETAIL</h2>
+                            <p>Nike Retail employees inspire athletes of all abilities to tap into their potential</p>
+                            <a class="apply2" href="{{ PORTAL_URL ~ 'SearchJobsRetail'}}">Retail Careers</a>
                         </section>
                     </div>
                 </section>
@@ -178,32 +178,32 @@
                         <div class="footer-bottom-column footer-bottom-column-left">
                             <ul class="footer-bottom-column footer-bottom-column-copyright">
                                 <li class="footer-locale"><a href="{{ nikeSite }}/language_tunnel"><span class="nike-cq-list-link1-image"><img src="http://content.nike.com/content/dam/nike/global/country_flags/us_sml.png" alt="United States" width="14" height="10">
-        </span>{{ United_States }}</a></li>
-                                <li>{{ _copy__2014_Nike__Inc__All_Rights_Reserved }}</li>
+        </span>United States</a></li>
+                                <li>&copy; 2014 Nike, Inc. All Rights Reserved</li>
                             </ul>
                             <ul class="footer-bottom-column footer-bottom-column-terms">
-                                <li class="footer-guides-container">{{ Guides }}
+                                <li class="footer-guides-container">Guides
                                     <ul class="footer-guides-menu">
-                                        <li><a href="{{ nikeSite }}/us/en_us/c/nikeid">{{ NIKEiD }}</a></li>
-                                        <li><a href="{{ nikeSite }}/us/en_us/c/running">{{ Running }}</a></li>
-                                        <li><a href="{{ nikeSite }}/us/en_us/c/basketball">{{ Basketball }}</a></li>
-                                        <li><a href="{{ nikeSite }}/us/en_us/c/nfl">{{ NFL }}</a></li>
-                                        <li><a href="{{ nikeSite }}/us/en_us/c/golf">{{ Golf }}</a></li>
-                                        <li><a href="{{ nikeSite }}/us/en_us/c/sportswear">{{ Nike_Sportswear }}</a></li>
-                                        <li><a href="{{ nikeSite }}/us/en_us/c/football">{{ Soccer }}</a></li>
-                                        <li><a href="{{ nikeSite }}/us/en_us/c/skateboarding">{{ Skateboarding }}</a></li>
-                                        <li><a href="{{ nikeSite }}/us/en_us/c/tennis">{{ Tennis }}</a></li>
-                                        <li><a href="{{ nikeSite }}/us/en_us/c/us-football">{{ Football }}</a></li>
-                                        <li><a href="{{ nikeSite }}/us/en_us/c/snowboarding">{{ Snowboarding }}</a></li>
-                                        <li><a href="{{ nikeSite }}/us/en_us/c/baseball">{{ Baseball }}</a></li>
+                                        <li><a href="{{ nikeSite }}/us/en_us/c/nikeid">NIKEiD</a></li>
+                                        <li><a href="{{ nikeSite }}/us/en_us/c/running">Running</a></li>
+                                        <li><a href="{{ nikeSite }}/us/en_us/c/basketball">Basketball</a></li>
+                                        <li><a href="{{ nikeSite }}/us/en_us/c/nfl">NFL</a></li>
+                                        <li><a href="{{ nikeSite }}/us/en_us/c/golf">Golf</a></li>
+                                        <li><a href="{{ nikeSite }}/us/en_us/c/sportswear">Nike Sportswear</a></li>
+                                        <li><a href="{{ nikeSite }}/us/en_us/c/football">Soccer</a></li>
+                                        <li><a href="{{ nikeSite }}/us/en_us/c/skateboarding">Skateboarding</a></li>
+                                        <li><a href="{{ nikeSite }}/us/en_us/c/tennis">Tennis</a></li>
+                                        <li><a href="{{ nikeSite }}/us/en_us/c/us-football">Football</a></li>
+                                        <li><a href="{{ nikeSite }}/us/en_us/c/snowboarding">Snowboarding</a></li>
+                                        <li><a href="{{ nikeSite }}/us/en_us/c/baseball">Baseball</a></li>
                                     </ul>
                                 </li>
-                                <li class="footer-terms-link"><a href="{{ nikeSite }}/us/en_us/c/help/terms-conditions">{{ Terms__amp__Conditions }}</a></li>
-                                <li class="footer-terms-link"><a href="{{ nikeSite }}/us/en_us/c/help/privacy-policy">{{ Privacy_Policy }}</a></li>
+                                <li class="footer-terms-link"><a href="{{ nikeSite }}/us/en_us/c/help/terms-conditions">Terms &amp; Conditions</a></li>
+                                <li class="footer-terms-link"><a href="{{ nikeSite }}/us/en_us/c/help/privacy-policy">Privacy Policy</a></li>
                             </ul>
                         </div>
                         <div class="footer-bottom-column footer-bottom-column-right footer__col footer__link--social">
-                            <h3 class="text--h3">{{ Social }}</h3>
+                            <h3 class="text--h3">Social</h3>
                             <a href="https://twitter.com/Nike" target="_blank"></a>
                             <a href="https://www.facebook.com/nike"></a>
                             <a href="https://www.youtube.com/user/nike" target="_blank"></a>
@@ -212,10 +212,10 @@
                     </div>
                     <div class="footer-bottom-container">
                         <ul class="footer-bottom-column footer-bottom-column-copyright isMobile">
-                            <li>{{ _copy__2014_Nike__Inc__All_Rights_Reserved }}</li>
+                            <li>&copy; 2014 Nike, Inc. All Rights Reserved</li>
                         </ul>
-                        <p>{{ NIKE__Inc__is_committed_to_employing_a_diverse_wor }}.</p>
-                        <p>{{ For_more_information__please_refer_to }} <a href="http://www1.eeoc.gov/employers/upload/eeoc_self_print_poster.pdf" target="_blank">{{ Equal_Employment_Opportunity_is_The_Law }}.</a> </p>
+                        <p>NIKE, Inc. is committed to employing a diverse workforce. Qualified applicants will receive consideration without regard to race, color, religion, sex, national origin, age, sexual orientation, gender identity, gender expression, protected veteran status, or disability. Nike is committed to working with and providing reasonable accommodation to individuals with disabilities. If, because of a medical condition or disability, you need a reasonable accommodation for any part of the employment process, please call 503-671-4156 and let us know the nature of your request, your location and your contact information.</p>
+                        <p>For more information, please refer to <a href="http://www1.eeoc.gov/employers/upload/eeoc_self_print_poster.pdf" target="_blank">Equal Employment Opportunity is The Law.</a> </p>
                     </div>
                 </div>
                 <script>

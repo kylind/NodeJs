@@ -1,0 +1,192 @@
+{% extends 'BaseTemplate.nopage' %}
+{% if USER or CONTACT_CREATED %}{% endif %}
+
+{% block configuration %}
+    {{ pageType('jobList') }}
+    {{ listId(78) }}
+    {{ recordsPerPage(jobRecordsAmount) }}
+    {{ jobView('JobDetail') }}
+    {{ setJobId(null) }}
+    {{ removePortalPersistentData('sessionJobId') }}
+    {{ removePortalPersistentData('sessionApplyRedirect') }}
+{% endblock %}
+
+{% block extraHeadData %}
+
+{% endblock %}
+
+{% block bodyId %}{{ locations }}{% endblock %}
+
+{% block banner %}
+        <div class="banner banner-locations">
+            <div class="headline">
+                <h1>{{ locations }}</h1>
+            </div>
+        </div>
+{% endblock %}
+
+{% block navWrapper %}
+
+        <a class="link-menu" href="{{ Base_PORTAL_URL }}">{{ Back_to_home }}</a>
+
+{% endblock %}
+
+
+{% block content %}
+
+    {% if USER or CONTACT_CREATED %}
+        {% set applicationUrl = applyPage %}
+    {% else %}
+        {% set applicationUrl = shortRegistrationPath ? (useUploadResume ? uploadResumePage : registerPage ) : loginPage %}
+    {% endif %}
+
+
+
+        <section class="career-area show-hide">
+            <h2 class="the-americas career-hdr"><span class="plus-minus"><img src="images/plus.png"></span> {{ NORTH_AMERICA }}</h2>
+            <div class="info americas-info">
+                    <P class="taRight">
+                        <a href="{{ PORTAL_URL ~ 'SearchJobsGeoNorthAmerica' }}"> {{ Search_for_Jobs_in_North_America }}</a>
+                    </P>
+                <h3>{{ NORTH_AMERICA }}</h3>
+                <p>{{ Step_onto_the_NIKE__Inc__World_Headquarters_campus }} <a href="http://about.nike.com/pages/nike-explore-team-sport-research-lab" target="_blank">{{ sport_research_lab }}</a> {{ and_design_facilities_to_renowned_onsite_childcare }}.</p>
+                <p>{{ While_Nike_World_Headquarters_boasts_the_largest_c }}, <a href="http://www.nike.com/us/en_us/c/golf/the-oven" target="_blank">{{ The_Oven }}</a>).</p>
+                <p>{{ Several_of_Nike_s_high_tech_distribution_centers_o }} <a href="http://www.nikeihm.com/" target="_blank">{{ Nike_In_House_Manufacturing }}</a> {{ _IHM__manufactures_and_engineers_plastics___includ }}.</p>
+                <p>{{ North_America_is_also_one_of_Nike_s_hottest_market }}.</p>
+                <!--<a class="white-btn" href="#" target="_blank">{{ Learn_More }}</a>
+                <ul>
+                    <li><img src="images/americas-pic11.jpg"></li>
+                    <li><img src="images/americas-pic2.jpg"></li>
+                </ul>-->
+            </div>
+        </section>
+        <section class="career-area show-hide">
+            <h2 class="south-america career-hdr"><span class="plus-minus"><img src="images/plus.png"></span> {{ Central___South_America }}</h2>
+            <div class="info samerica-info">
+                    <P class="taRight">
+                        <a href="{{ PORTAL_URL ~ 'SearchJobsGeoLatam' }}"> {{ Search_for_Jobs_in_Central___South_America }}</a>
+                    </P>
+                <h3>{{ Central___South_America }}</h3>
+                <p>{{ From_the_heart_of_the_fashionable_Ipanema_Beach_di }}.</p>
+                <!--<a class="white-btn" href="#" target="_blank">{{ Learn_More }}</a>
+                <ul>
+                    <li><img src="images/americas-pic4.jpg"></li>
+                    <li><img src="images/samericas-pic2.jpg"></li>
+                </ul>-->
+            </div>
+        </section>
+        <section class="career-area show-hide">
+            <h2 class="europe career-hdr"><span class="plus-minus"><img src="images/plus.png"></span> {{ EUROPE }}</h2>
+            <div class="info europe-info">
+                     <P class="taRight">
+                        <a href="{{ PORTAL_URL ~ 'SearchJobsGeoEurope' }}"> {{ Search_for_Jobs_in_Europe }}</a>
+                    </P>
+                <h3>{{ EUROPE }}</h3>
+                <p>{{ NIKE__Inc__s_European_Headquarters_is_located_in_H }}. </p>
+                <p>{{ The_campus_features_buildings_bearing_the_name_of_ }}. </p>
+                <p>{{ Our_European_Headquarters_support_Nike_s_operation }}.</p>
+                <p>{{ Nike_also_has_country_headquarters_in_major_Europe }}. </p>
+                <!--<a class="white-btn" href="#" target="_blank">{{ Learn_More }}</a>
+                <ul>
+                    <li><img src="images/europe-pic8.jpg"></li>
+                    <li><img src="images/europe10.jpg"></li>
+                </ul>-->
+            </div>
+        </section>
+        <section class="career-area show-hide">
+            <h2 class="greater-china-asia-pac career-hdr"><span class="plus-minus"><img src="images/plus.png"></span>{{ Greater_China }}</h2>
+            <div class="info china-info">
+                                <P class="taRight">
+                        <a href="{{ PORTAL_URL ~ 'SearchJobsGeoGreaterChina' }}"> {{ Search_for_Jobs_in_Greater_China }}</a>
+                    </P>
+                <h3>{{ Greater_China }}</h3>
+                <p>{{ The_Nike_Greater_China_Campus__located_in_Shanghai }}.</p>
+                <p>{{ As_the_leading_sports_brand_in_China__Nike_continu }}.</p>
+                <p>{{ Across_Greater_China_Nike_is_taking_the_retail_exp }}.</p>
+                <p>{{ Growth_is_all_we_re_experiencing_in_China__Whether }}.</p>
+                <!--<a class="white-btn" href="#" target="_blank">{{ Learn_More }}</a>
+                <ul>
+                    <li><img src="images/china8.jpg"></li>
+                    <li><img src="images/china7.jpg"></li>
+                </ul>-->
+            </div>
+        </section>
+        <section class="career-area show-hide">
+            <h2 class="japan career-hdr"><span class="plus-minus"><img src="images/plus.png"></span>{{ JAPAN___ASIA_PACIFIC }}</h2>
+            <div class="info japan-info">
+                                <P class="taRight">
+                        <a href="{{ PORTAL_URL ~ 'SearchJobsGeoAsiaPacific' }}"> {{ Search_for_Jobs_in_Japan___Asia_Pacific }}</a>
+                    </P>
+                <h3>{{ JAPAN___ASIA_PACIFIC }}</h3>
+                <p>{{ Japan_and_Asia_Pacific_form_one_of_the_most_divers }}. </p>
+                <p>{{ The_Japanese_and_Asia_Pacific_geographies_support_ }}. </p>
+                <p>{{ Nike_has_country_head_quarters_located_throughout_ }}.</p>
+                <!--<a class="white-btn" href="#" target="_blank">{{ Learn_More }}</a>
+                <ul>
+                    <li><img src="images/japain-pic5.jpg"></li>
+                    <li><img src="images/china1.jpg"></li>
+                </ul>-->
+            </div>
+        </section>
+        <section class="career-area show-hide">
+            <h2 class="middle-east-africa career-hdr"><span class="plus-minus"><img src="images/plus.png"></span> {{ middle_east___africa }}</h2>
+            <div class="info africa-info">
+                                <P class="taRight">
+                        <a href="{{ PORTAL_URL ~ 'SearchJobsGeoMEastAfrica' }}"> {{ Search_for_Jobs_in_Middle_East___Africa }}</a>
+                    </P>
+                <h3>{{ middle_east___africa }}</h3>
+                <p>{{ The_emerging_markets_of_Africa_and_Middle_East_pro }}.</p>
+                <!--<a class="white-btn" href="#" target="_blank">{{ Learn_More }}</a>
+                <ul>
+                    <li><img src="images/ME-pic1.jpg"></li>
+                    <li><img src="images/ME-pic2.jpg"></li>
+                </ul>-->
+            </div>
+        </section>
+
+
+
+
+        {% if URL_QUERY is not empty or searchLocation or searchText %}
+            <form method="post" action="{{searchJobsPage}}" autocomplete="on" class="generalForm">
+
+                {% include 'tpt/searchFilterBy.tpt' %}
+            </form>
+
+            {% include 'tpt/jobPagination.tpt' with {'recordsAmount': jobRecordsAmount, 'minPag': '5', 'maxPag': '5', 'displayLegend': true} %}
+
+            <ul class="jobList cleanList">
+                {% for job in jobs %}
+                    {% include 'tpt/jobResultItem.tpt' %}
+                {% else %}
+                    <li>{{ There_are_currently_no_jobs_available_based_on_you }}.
+                        {% if useJobAlerts and (USER or CONTACT_CREATED) %}
+                        - <a href="{{ PORTAL_URL ~ 'CreateAgent' }}">{{ Create_search_agent }}</a>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+
+            {% include 'tpt/jobPagination.tpt' with {'recordsAmount': jobRecordsAmount, 'minPag': '5', 'maxPag': '5'} %}
+        {% endif %}
+
+    <script>
+        $(document).ready(function() {
+                $('.show-hide h2').click(function() {
+                    if($(this).hasClass('active')) {
+                        $(this).parent().find('.info').hide();
+                        $(this).removeClass('active');
+                        $('.plus-minus').html('<img src="images/plus.png">');
+                    }
+                    else {
+                        $('.show-hide h2').removeClass('active');
+                        $('.show-hide .info').hide();
+                        $(this).parent().find('.info').show();
+                        $(this).addClass('active');
+                        $('.plus-minus').html('<img src="images/plus.png">');
+                        $(this).find('.plus-minus').html('<img src="images/minus.png">');
+                    }
+                });
+        });
+    </script>
+{% endblock %}

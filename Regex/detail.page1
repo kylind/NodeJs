@@ -1,0 +1,158 @@
+{# ------------ BaseTemplate.nopage ------------ #}
+{% set Espa_ntilde_ol = "Espa&ntilde;ol" %}{# Espa&ntilde;ol #}
+
+{% set Portugu_ecirc_s = "Portugu&ecirc;s" %}{# Portugu&ecirc;s #}
+
+{% set Nike = "Nike" %}{# Nike #}
+
+{% set Nike_talent_videos = "Nike talent videos" %}{# Nike talent videos #}
+
+{% set connect_with_us_on_linkedin = "connect with us on linkedin" %}{# connect with us on linkedin #}
+
+{% set follow_us_on_glassdoor = "follow us on glassdoor" %}{# follow us on glassdoor #}
+
+{% set join_our_talent_community = "join our talent community" %}{# join our talent community #}
+
+{% set Sign_Up_For_Job_Alerts = "Sign Up For Job Alerts" %}{# Sign Up For Job Alerts #}
+
+{% set You_are_leaving_this_Nike_website_and_going_to_a_s = "You are leaving this Nike website and going to a site operated by a third party" %}{# You are leaving this Nike website and going to a site operated by a third party #}
+
+{% set You_will_be_redirected_in = "You will be redirected in" %}{# You will be redirected in #}
+
+{% set seconds = "seconds" %}{# seconds #}
+
+{% set My_Profile = "My Profile" %}{# My Profile #}
+
+{% set CORPORATE = "CORPORATE" %}{# CORPORATE #}
+
+{% set Limits_shattered_daily_at_Nike_s_corporate_headqua = "Limits shattered daily at Nike's corporate headquarters and offices around the world" %}{# Limits shattered daily at Nike's corporate headquarters and offices around the world #}
+
+{% set Corporate_Careers = "Corporate Careers" %}{# Corporate Careers #}
+
+{% set RETAIL = "RETAIL" %}{# RETAIL #}
+
+{% set Nike_Retail_employees_inspire_athletes_of_all_abil = "Nike Retail employees inspire athletes of all abilities to tap into their potential" %}{# Nike Retail employees inspire athletes of all abilities to tap into their potential #}
+
+{% set Retail_Careers = "Retail Careers" %}{# Retail Careers #}
+
+{% set United_States = "United States" %}{# United States #}
+
+{% set _copy__2014_Nike__Inc__All_Rights_Reserved = "&copy; 2014 Nike, Inc. All Rights Reserved" %}{# &copy; 2014 Nike, Inc. All Rights Reserved #}
+
+{% set Guides = "Guides" %}{# Guides #}
+
+{% set NIKEiD = "NIKEiD" %}{# NIKEiD #}
+
+{% set Running = "Running" %}{# Running #}
+
+{% set Basketball = "Basketball" %}{# Basketball #}
+
+{% set NFL = "NFL" %}{# NFL #}
+
+{% set Golf = "Golf" %}{# Golf #}
+
+{% set Nike_Sportswear = "Nike Sportswear" %}{# Nike Sportswear #}
+
+{% set Soccer = "Soccer" %}{# Soccer #}
+
+{% set Skateboarding = "Skateboarding" %}{# Skateboarding #}
+
+{% set Tennis = "Tennis" %}{# Tennis #}
+
+{% set Football = "Football" %}{# Football #}
+
+{% set Snowboarding = "Snowboarding" %}{# Snowboarding #}
+
+{% set Baseball = "Baseball" %}{# Baseball #}
+
+{% set Terms__amp__Conditions = "Terms &amp; Conditions" %}{# Terms &amp; Conditions #}
+
+{% set Privacy_Policy = "Privacy Policy" %}{# Privacy Policy #}
+
+{% set Social = "Social" %}{# Social #}
+
+{% set NIKE__Inc__is_committed_to_employing_a_diverse_wor = "NIKE, Inc. is committed to employing a diverse workforce. Qualified applicants will receive consideration without regard to race, color, religion, sex, national origin, age, sexual orientation, gender identity, gender expression, protected veteran status, or disability. Nike is committed to working with and providing reasonable accommodation to individuals with disabilities. If, because of a medical condition or disability, you need a reasonable accommodation for any part of the employment process, please call 503-671-4156 and let us know the nature of your request, your location and your contact information" %}{# NIKE, Inc. is committed to employing a diverse workforce. Qualified applicants will receive consideration without regard to race, color, religion, sex, national origin, age, sexual orientation, gender identity, gender expression, protected veteran status, or disability. Nike is committed to working with and providing reasonable accommodation to individuals with disabilities. If, because of a medical condition or disability, you need a reasonable accommodation for any part of the employment process, please call 503-671-4156 and let us know the nature of your request, your location and your contact information #}
+
+{% set For_more_information__please_refer_to = "For more information, please refer to" %}{# For more information, please refer to #}
+
+{% set Equal_Employment_Opportunity_is_The_Law = "Equal Employment Opportunity is The Law" %}{# Equal Employment Opportunity is The Law #}
+
+{# ------------ SearchByLocation.page ------------ #}
+{% set locations = "locations" %}{# locations #}
+
+{% set Back_to_home = "Back to home" %}{# Back to home #}
+
+{% set NORTH_AMERICA = "NORTH AMERICA" %}{# NORTH AMERICA #}
+
+{% set Search_for_Jobs_in_North_America = "Search for Jobs in North America" %}{# Search for Jobs in North America #}
+
+{% set Step_onto_the_NIKE__Inc__World_Headquarters_campus = "Step onto the NIKE, Inc. World Headquarters campus in Beaverton, Ore., and the brand’s energy and innovative drive are palpable. A diverse assembling of more than 8,500 employees push the limits in areas such as management, research, design, development, marketing, finance and other administrative functions. From a leading-edge" %}{# Step onto the NIKE, Inc. World Headquarters campus in Beaverton, Ore., and the brand’s energy and innovative drive are palpable. A diverse assembling of more than 8,500 employees push the limits in areas such as management, research, design, development, marketing, finance and other administrative functions. From a leading-edge #}
+
+{% set sport_research_lab = "sport research lab" %}{# sport research lab #}
+
+{% set and_design_facilities_to_renowned_onsite_childcare = "and design facilities to renowned onsite childcare centers, Nike campus life reflects the company’s focus on employee growth and balance of work and play. Just minutes from downtown Portland, the lush, meticulously manicured grounds of the campus stretch across 270 acres and encompass more than 35 buildings — most displaying the names of legendary athletes such as John McEnroe, Mia Hamm and Nolan Ryan. The Nike campus circles the tranquil Lake Nike and features world-class amenities such as fitness centers, NIKE, Inc. retail stores, cafeterias and restaurants, dry-cleaning services, running trails, soccer fields, beach volleyball courts and much more. Historical displays and athlete memorabilia remind employees, athletes and guests of Nike’s rich history and heritage — as well as its potential" %}{# and design facilities to renowned onsite childcare centers, Nike campus life reflects the company’s focus on employee growth and balance of work and play. Just minutes from downtown Portland, the lush, meticulously manicured grounds of the campus stretch across 270 acres and encompass more than 35 buildings — most displaying the names of legendary athletes such as John McEnroe, Mia Hamm and Nolan Ryan. The Nike campus circles the tranquil Lake Nike and features world-class amenities such as fitness centers, NIKE, Inc. retail stores, cafeterias and restaurants, dry-cleaning services, running trails, soccer fields, beach volleyball courts and much more. Historical displays and athlete memorabilia remind employees, athletes and guests of Nike’s rich history and heritage — as well as its potential #}
+
+{% set While_Nike_World_Headquarters_boasts_the_largest_c = "While Nike World Headquarters boasts the largest concentration of Nike employees in North America, the company has other corporate locations in cities such as New York, Chicago, Los Angeles, the Toronto area and Fort Worth, Texas (home of Nike Golf’s research facility" %}{# While Nike World Headquarters boasts the largest concentration of Nike employees in North America, the company has other corporate locations in cities such as New York, Chicago, Los Angeles, the Toronto area and Fort Worth, Texas (home of Nike Golf’s research facility #}
+
+{% set The_Oven = "The Oven" %}{# The Oven #}
+
+{% set Several_of_Nike_s_high_tech_distribution_centers_o = "Several of Nike’s high-tech distribution centers operate in the U.S., with the majority of the facilities in Memphis, Tenn. Nike distribution employees ensure that millions of units of footwear, apparel and equipment arrive at the right destinations on time. And" %}{# Several of Nike’s high-tech distribution centers operate in the U.S., with the majority of the facilities in Memphis, Tenn. Nike distribution employees ensure that millions of units of footwear, apparel and equipment arrive at the right destinations on time. And #}
+
+{% set Nike_In_House_Manufacturing = "Nike In-House Manufacturing" %}{# Nike In-House Manufacturing #}
+
+{% set _IHM__manufactures_and_engineers_plastics___includ = "(IHM) manufactures and engineers plastics — including the iconic Nike Air bags — for NIKE, Inc. and other customers from their locations in Beaverton, Ore., and St. Louis, Mo" %}{# (IHM) manufactures and engineers plastics — including the iconic Nike Air bags — for NIKE, Inc. and other customers from their locations in Beaverton, Ore., and St. Louis, Mo #}
+
+{% set North_America_is_also_one_of_Nike_s_hottest_market = "North America is also one of Nike’s hottest markets for retail, with more than 200 Nike Stores and Nike Factory Stores in the U.S. and Canada" %}{# North America is also one of Nike’s hottest markets for retail, with more than 200 Nike Stores and Nike Factory Stores in the U.S. and Canada #}
+
+{% set Learn_More = "Learn More" %}{# Learn More #}
+
+{% set Central___South_America = "Central & South America" %}{# Central & South America #}
+
+{% set Search_for_Jobs_in_Central___South_America = "Search for Jobs in Central & South America" %}{# Search for Jobs in Central & South America #}
+
+{% set From_the_heart_of_the_fashionable_Ipanema_Beach_di = "From the heart of the fashionable Ipanema Beach district in Brasil to the Rambla of Montevideo in Uruguay, Nike retail, distribution center and corporate employees help fuel the passion of sports across Central and South America. Nike’s presence in the region spans decades: What was once a small Nike do Brasil subsidiary in 1990 is now one of the company’s most important markets, and Nike’s first operations in Argentina opened more than two decades ago. Today, more than 3,000 employees work in Brasil, Argentina, Chile, Uruguay, Paraguay, Bolivia and Mexico" %}{# From the heart of the fashionable Ipanema Beach district in Brasil to the Rambla of Montevideo in Uruguay, Nike retail, distribution center and corporate employees help fuel the passion of sports across Central and South America. Nike’s presence in the region spans decades: What was once a small Nike do Brasil subsidiary in 1990 is now one of the company’s most important markets, and Nike’s first operations in Argentina opened more than two decades ago. Today, more than 3,000 employees work in Brasil, Argentina, Chile, Uruguay, Paraguay, Bolivia and Mexico #}
+
+{% set EUROPE = "EUROPE" %}{# EUROPE #}
+
+{% set Search_for_Jobs_in_Europe = "Search for Jobs in Europe" %}{# Search for Jobs in Europe #}
+
+{% set NIKE__Inc__s_European_Headquarters_is_located_in_H = "NIKE, Inc.’s European Headquarters is located in Hilversum, just 16 miles southeast of Amsterdam, one of Europe’s most diverse and exciting capitals. With nearly 2,000 employees, from more than 70 countries, the campus is a dynamic, energizing place to work that reflects the values and spirit of our brand" %}{# NIKE, Inc.’s European Headquarters is located in Hilversum, just 16 miles southeast of Amsterdam, one of Europe’s most diverse and exciting capitals. With nearly 2,000 employees, from more than 70 countries, the campus is a dynamic, energizing place to work that reflects the values and spirit of our brand #}
+
+{% set The_campus_features_buildings_bearing_the_name_of_ = "The campus features buildings bearing the name of European sporting legends such as Sergei Bubka, Richard Krajicek and Eric Cantona, and is located in and amongst numerous parks, lakes, cycling lanes and running tracks. Since Nike believes that if you have a body, you are an athlete, our employees all benefit from extensive, world-class sports facilities including: gymnasiums with regular classes, football pitches, tennis, volleyball and basketball courts, running tracks and on-site physiotherapists. Employees also benefit from amenities such as an employee store and numerous catering facilities" %}{# The campus features buildings bearing the name of European sporting legends such as Sergei Bubka, Richard Krajicek and Eric Cantona, and is located in and amongst numerous parks, lakes, cycling lanes and running tracks. Since Nike believes that if you have a body, you are an athlete, our employees all benefit from extensive, world-class sports facilities including: gymnasiums with regular classes, football pitches, tennis, volleyball and basketball courts, running tracks and on-site physiotherapists. Employees also benefit from amenities such as an employee store and numerous catering facilities #}
+
+{% set Our_European_Headquarters_support_Nike_s_operation = "Our European Headquarters support Nike’s operations across the Western Europe and Central & Eastern Europe geographies. Departments include Marketing & Communications, Design, Digital & Technology, Human Resources, Finance, Legal, Merchandising, Product Development, Retail and Sales" %}{# Our European Headquarters support Nike’s operations across the Western Europe and Central & Eastern Europe geographies. Departments include Marketing & Communications, Design, Digital & Technology, Human Resources, Finance, Legal, Merchandising, Product Development, Retail and Sales #}
+
+{% set Nike_also_has_country_headquarters_in_major_Europe = "Nike also has country headquarters in major European hubs such as London, Moscow, Paris, Frankfurt, Barcelona, Istanbul, Prague, Bologna and Stockholm, a European Distribution Center based in Belgium, innovation centers in locations such as Montebelluna Italy, and retail stores across the entire European region" %}{# Nike also has country headquarters in major European hubs such as London, Moscow, Paris, Frankfurt, Barcelona, Istanbul, Prague, Bologna and Stockholm, a European Distribution Center based in Belgium, innovation centers in locations such as Montebelluna Italy, and retail stores across the entire European region #}
+
+{% set Greater_China = "Greater China" %}{# Greater China #}
+
+{% set Search_for_Jobs_in_Greater_China = "Search for Jobs in Greater China" %}{# Search for Jobs in Greater China #}
+
+{% set The_Nike_Greater_China_Campus__located_in_Shanghai = "The Nike Greater China Campus, located in Shanghai, confirms Nike’s commitment to the Greater China market and is home to almost 2000 employees. Together, China, Hong Kong and Taiwan continue to elevate both the Nike business and brand creating the fasting growing global market and second largest single market behind Nike North America with sales of over USD2.5 Billion" %}{# The Nike Greater China Campus, located in Shanghai, confirms Nike’s commitment to the Greater China market and is home to almost 2000 employees. Together, China, Hong Kong and Taiwan continue to elevate both the Nike business and brand creating the fasting growing global market and second largest single market behind Nike North America with sales of over USD2.5 Billion #}
+
+{% set As_the_leading_sports_brand_in_China__Nike_continu = "As the leading sports brand in China, Nike continues to push the limits of innovation and growth. We remain closely focused on bringing the brand closer to consumers, while creating platforms for Chinese athletes to pursue their dreams. The foundation of our success in China is, of course, innovation – innovation drawn from listening to the voice of the Chinese athlete and then applying creative design and technology to meet their needs" %}{# As the leading sports brand in China, Nike continues to push the limits of innovation and growth. We remain closely focused on bringing the brand closer to consumers, while creating platforms for Chinese athletes to pursue their dreams. The foundation of our success in China is, of course, innovation – innovation drawn from listening to the voice of the Chinese athlete and then applying creative design and technology to meet their needs #}
+
+{% set Across_Greater_China_Nike_is_taking_the_retail_exp = "Across Greater China Nike is taking the retail experience to the next level, delivering true personalization and customization at every turn. Continued expansion of our retail network will only build stronger consumer connections that will feature our most innovative products – allowing us to strengthen the Nike brand and enable a truly world-class shopping experience" %}{# Across Greater China Nike is taking the retail experience to the next level, delivering true personalization and customization at every turn. Continued expansion of our retail network will only build stronger consumer connections that will feature our most innovative products – allowing us to strengthen the Nike brand and enable a truly world-class shopping experience #}
+
+{% set Growth_is_all_we_re_experiencing_in_China__Whether = "Growth is all we’re experiencing in China. Whether it’s across our Running, Training, Sportswear, Tennis, Action Sports Categories; our hardworking employee-teams in Merchandising, Marketing, Sales, Retail & Manufacturing; or our Enabling functions, such as Human Resources, Supply Chain Operations, Legal, IT and Finance – we are on the offense always for talent and remain committed to both the development of talent in the local market place as well as the creation of future global leaders" %}{# Growth is all we’re experiencing in China. Whether it’s across our Running, Training, Sportswear, Tennis, Action Sports Categories; our hardworking employee-teams in Merchandising, Marketing, Sales, Retail & Manufacturing; or our Enabling functions, such as Human Resources, Supply Chain Operations, Legal, IT and Finance – we are on the offense always for talent and remain committed to both the development of talent in the local market place as well as the creation of future global leaders #}
+
+{% set JAPAN___ASIA_PACIFIC = "JAPAN & ASIA PACIFIC" %}{# JAPAN & ASIA PACIFIC #}
+
+{% set Search_for_Jobs_in_Japan___Asia_Pacific = "Search for Jobs in Japan & Asia Pacific" %}{# Search for Jobs in Japan & Asia Pacific #}
+
+{% set Japan_and_Asia_Pacific_form_one_of_the_most_divers = "Japan and Asia Pacific form one of the most diverse and exciting regions for the Nike business driven by over 5000 employees located across 13 dynamic and energizing countries" %}{# Japan and Asia Pacific form one of the most diverse and exciting regions for the Nike business driven by over 5000 employees located across 13 dynamic and energizing countries #}
+
+{% set The_Japanese_and_Asia_Pacific_geographies_support_ = "The Japanese and Asia-Pacific geographies support Nike’s operations across all key business functions inclusive of Marketing & Communications, Design, Digital & Technology, Human Resources, Finance, Legal, Merchandising, Product Development, Retail and Sales. The region is home to the majority of Nike’s manufacturing partners and we remain proud of the explosive growth of the company at Retail level" %}{# The Japanese and Asia-Pacific geographies support Nike’s operations across all key business functions inclusive of Marketing & Communications, Design, Digital & Technology, Human Resources, Finance, Legal, Merchandising, Product Development, Retail and Sales. The region is home to the majority of Nike’s manufacturing partners and we remain proud of the explosive growth of the company at Retail level #}
+
+{% set Nike_has_country_head_quarters_located_throughout_ = "Nike has country head-quarters located throughout Asia-Pacific inclusive of Japan, Korea, India, Singapore, Malaysia, Indonesia, Vietnam, Thailand, Sri-Lanka, South Africa and Australia & Pacific as well as retail stores across the region" %}{# Nike has country head-quarters located throughout Asia-Pacific inclusive of Japan, Korea, India, Singapore, Malaysia, Indonesia, Vietnam, Thailand, Sri-Lanka, South Africa and Australia & Pacific as well as retail stores across the region #}
+
+{% set middle_east___africa = "middle east & africa" %}{# middle east & africa #}
+
+{% set Search_for_Jobs_in_Middle_East___Africa = "Search for Jobs in Middle East & Africa" %}{# Search for Jobs in Middle East & Africa #}
+
+{% set The_emerging_markets_of_Africa_and_Middle_East_pro = "The emerging markets of Africa and Middle East provide a unique opportunity to deliver sport innovation and inspiration in the diverse cultures of the regions. More than 200 Nike employees work in Africa and the Middle East, with the majority working at the Nike Africa corporate office in Midrand, Gauteng, South Africa. Nike Stores and Nike Factory Stores serve consumers in the bustling metropolises of many African countries, and Nike also has a retail presence in Israel" %}{# The emerging markets of Africa and Middle East provide a unique opportunity to deliver sport innovation and inspiration in the diverse cultures of the regions. More than 200 Nike employees work in Africa and the Middle East, with the majority working at the Nike Africa corporate office in Midrand, Gauteng, South Africa. Nike Stores and Nike Factory Stores serve consumers in the bustling metropolises of many African countries, and Nike also has a retail presence in Israel #}
+
+{% set Create_search_agent = "Create search agent" %}{# Create search agent #}
+
+{% set There_are_currently_no_jobs_available_based_on_you = "There are currently no jobs available based on your search criteria" %}{# There are currently no jobs available based on your search criteria #}
+
